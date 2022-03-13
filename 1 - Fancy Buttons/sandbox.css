@@ -299,3 +299,105 @@
   opacity: 1;
   right: 1.2em;
 }
+
+/* ========================================
+
+    toggle Buttons!
+
+   ====================================== */
+
+.toggle-1 {
+  font-family: Helvetica, Arial, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+}
+
+.toggle-1__input {
+  display: none;
+}
+
+.toggle-1__button {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 80px;
+  background-color: #f2395a;
+  border: 1px solid #f2395a;
+  cursor: pointer;
+
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 20px;
+  transition: all ease 0.3s;
+}
+
+.toggle-1__button::before {
+  position: absolute;
+  content: "off";
+  background: white;
+  color: #f2395a;
+  height: 20px;
+  padding: 0 3px;
+  top: 5px;
+  left: 38px;
+  transition: all ease 0.3s;
+}
+
+.toggle-1__input:checked + .toggle-1__button {
+  background: #00b3b4;
+  border: 1px solid #00b3b4;
+}
+
+.toggle-1__input:checked + .toggle-1__button::before {
+  left: 5px;
+  content: "on";
+  color: #00b3b4;
+}
+
+.toggle-2 {
+  font-family: Helvetica, Arial, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+  font-size: 0.8rem;
+}
+
+.toggle-2__input {
+  display: none;
+}
+
+.toggle-2__button {
+  position: relative;
+  border: 1px solid black;
+  padding: 5px 10px 5px 30px;
+  background: white;
+  color: #aaa;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.toggle-2__button::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: #ccc;
+  left: 10px;
+  top: 7px;
+  transition: all ease 0.3s;
+  border-radius: 100%;
+}
+
+.toggle-2__input:checked + .toggle-2__button {
+  background: #00b3b4;
+  border-color: #00b3b4;
+  color: white;
+}
+
+.toggle-2__input:checked + .toggle-2__button::before {
+  background: #fff;
+}
